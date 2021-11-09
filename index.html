@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Git Guide</title>
+	<link rel="stylesheet" href="css/wild.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/equilibrium-gray-light.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<h2 class="no-margin">Git Cheat Sheet</h2>
+				<small>by <a target="_blank" href="https://github.com/villed3">villed3</a></small>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-6-m no-margin-bottom">
+				<div class="row vertical">
+					<!-- <div class="col debug bg-grayradius">
+						<h5 class="bold bolder">Init</h5>
+						Initialize local repository in current directory:
+						<pre><code class="language-markdown">git init</code></pre>
+					</div> -->
+					<div class="col debug bg-gray radius">
+						<h5 class="bold bolder">Init</h5>
+						Initialize local repository in current directory:
+						<pre><code class="language-markdown">git init</code></pre>
+					</div>
+					<div class="col debug bg-primary-light radius">
+						<h5 class="bold bolder">Clone</h5>
+						Clone repository into subdirectory of current directory:
+						<pre><code class="language-markdown"># remote
+git clone &lt;server&gt;
+
+# local
+git clone /path/to/local/repository</code></pre>
+					</div>
+					<div class="col debug bg-gray radius">
+						<h5 class="bold bolder">Status</h5>
+						Get status of repository, showing which modified files that are staged/unstaged/untracked and whether branch is up to date with remote:
+						<pre><code class="language-markdown">git status</code></pre>
+					</div>
+					<div class="col debug bg-primary-light radius">
+						<h5 class="bold bolder">Branches</h5>
+						Create new branch:
+						<pre><code class="language-markdown">git checkout -b &lt;branch_name&gt;</code></pre>
+						Switch to another branch:
+						<pre><code class="language-markdown">git checkout master
+git checkout &lt;branch_name&gt;</code></pre>
+					</div>
+					<div class="col debug bg-gray radius">
+						<h5 class="bold bolder">Merge</h5>
+						Merge branch into main or other branch:
+						<pre><code class="language-markdown">git merge main
+git merge &lt;branch&gt;</code></pre>
+						<p><em>
+							Conflicts must be solved if merge does not succeed. Edit affected files and add them again. It can be easier to merge using the graphical interface of your git server website.
+						</em></p>
+					</div>
+					<div class="col debug bg-primary-light radius">
+						<h5 class="bold bolder">Discard</h5>
+						Reset an unstaged file to its last commited version:
+						<pre><code class="language-markdown">git checkout -- &lt;filename&gt;</code></pre>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-6-m no-margin-bottom">
+				<div class="row vertical">
+					<div class="col debug bg-primary-light radius">
+						<h5 class="bold bolder">Add & Commit</h5>
+						Add modified files to the index (stage them):
+						<pre><code class="language-markdown"># single file
+git add &lt;filename&gt;
+
+# entire subdirectory
+git add some/directory/
+
+# all files
+git add *</code></pre>
+						Commit the staged files and provide a message:
+						<pre><code class="language-markdown">git commit -m "A short but descriptive message"</code></pre>
+					</div>
+					<div class="col debug bg-gray radius">
+						<h5 class="bold bolder">Pull</h5>
+						Update your local repository branch to latest from active remote:
+						<pre><code class="language-markdown">git pull</code></pre>
+					</div>
+					<div class="col debug bg-primary-light radius">
+						<h5 class="bold bolder">Push</h5>
+						Upload a branch to the remote location:
+						<pre><code class="language-markdown">git push origin master
+git push &lt;remote&gt; &lt;branch&gt;</code></pre>
+					</div>
+					<div class="col debug bg-gray radius">
+						<h5 class="bold bolder">Remote</h5>
+						Add a remote location to push from, with a custom alias:
+						<pre><code class="language-markdown">git remote add &lt;alias&gt; &lt;server&gt;</code></pre>
+						Verify that remotes are working:
+						<pre><code class="language-markdown">git remote -v</code></pre>
+					</div>
+					<div class="col debug bg-primary-light radius">
+						<h5 class="bold bolder">Config</h5>
+						View current configured options for the local repository:
+						<pre><code class="language-markdown">git config --list</code></pre>
+						Modify the value of an option:
+						<pre><code class="language-markdown">git config &lt;option&gt; &lt;value&gt;</code></pre>
+						<p><em>
+							If you use different git servers using different account details, you will need to change user.name and user.email for each local repository.
+						</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        document.querySelectorAll('code').forEach((block) => {
+            hljs.highlightBlock(block);
+        })
+    </script>
+</body>
+</html>
