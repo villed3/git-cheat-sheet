@@ -1,2 +1,2 @@
 # Git Cheat Sheet
-A personal git cheat sheet, hosted att <a href="https://wildgo.at/docs/git-guide/" target="_blank">wildgo.at</a>
+A personal git cheat sheet, hosted att [wildgo.at](https://wildgo.at/docs/git-cheat-sheet)
